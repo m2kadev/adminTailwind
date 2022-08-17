@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+.shadow-all {
+    box-shadow: 5px 5px 5px -5px #cecece;
+}
+
+.shadow-bottom {
+    box-shadow: 0 5px 5px -5px #cecece;
+}
+
+.shadow-left {
+    box-shadow: 5px 0 5px -5px #cecece;
+}
+
+.shadow-right {
+    box-shadow: -5px 0 5px -5px #cecece;
+}
+
+.content {
+    grid-template-columns: auto 1fr;
+}
+
+.active {
+    @apply bg-lightGrey relative
+
+}
+
+.active::before {
+    content: '';
+    @apply absolute top-0 left-0 w-1 h-full bg-lightGreen
+}
+
+.data-wrapper {
+    grid-template-rows: auto auto 1fr auto;
+}

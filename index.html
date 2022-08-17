@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="tailwind.css">
+    <title>Admin Panel</title>
+</head>
+<body class="bg-lightGrey flex flex-col h-[100vh] w-[100vw]">
+    <!-- Header Section -->
+    <div id="header" class="bg-lightGreen shadow-bottom px-6 py-4 flex items-center justify-start">
+
+        <!-- Icon -->
+        <div class="w-[26px] h-[18px] flex flex-col justify-between cursor-pointer">
+            <div class="w-full h-[3px] bg-white"></div>
+            <div class="w-full h-[3px] bg-white"></div>
+            <div class="w-full h-[3px] bg-white"></div>
+        </div>
+
+        <!-- Header Text -->
+        <h3 class="px-6 text-xl text-white">Sales By Category</h3>
+    </div>
+
+    <!-- Content Section -->
+    <div id="content" class="content grid gap-x-6 shadow-all h-[100%]">
+        <!-- Side bar -->
+        <div class="flex flex-col bg-white shadow-left">
+            <a href="#" class="px-6 py-4"><img src="images/chart.png" alt=""></a>
+            <a href="#" class="px-6 py-4 active"><img src="images/user.png" alt=""></a>
+            <a href="#" class="px-6 py-4"><img src="images/shopping-bag.png" alt=""></a>
+            <a href="#" class="px-6 py-4"><img src="images/id-card.png" alt=""></a>
+            <a href="#" class="px-6 py-4"><img src="images/shopping-cart.png" alt=""></a>
+            <a href="#" class="px-6 py-4"><img src="images/users.png" alt=""></a>
+            <a href="#" class="px-6 py-4"><img src="images/extension.png" alt=""></a>
+            <a href="#" class="px-6 py-4"><img src="images/setting.png" alt=""></a>
+        </div>
+
+        <!-- Main -->
+        <div class="h-full pt-6 pr-6 mb-5">
+
+            <div class="btn-group flex flex-wrap space-x-4 justify-start text-lg">
+                <!-- Date -->
+                <div class="flex space-x-1 justify-start text-textColor">
+                    <a href="#" class="p-2 px-4 py-2 rounded bg-white shadow-all cursor-pointer text-textColor font-bold text-lg">&#60;</a>
+                    <div class="p-2 px-4 py-2 space-x-2 rounded bg-white shadow-all text-lg">Jul 12 2022-Aug 10, 2022</div>
+                    <a href="#" class="p-2 py-2 px-4 font-bold text-xl rounded text-textColor bg-white shadow-all cursor-pointer
+                    ">&#62;</a>
+                </div>
+
+                <!-- Date -- Days -->
+                <div class="flex justify-start text-textColor bg-white items-center cursor-pointer rounded shadow-all px-4 space-x-2">
+                    <img src="images/clock.png" class="w-[20px]">
+                    <div class="py-2">All day</div>
+                    <img src="images/down.png" class="w-[20px]">
+                </div>
+
+                <!-- Employees -->
+                <div class="flex justify-start text-textColor bg-white items-center cursor-pointer rounded shadow-all px-4 space-x-2">
+                    <img src="images/solo-user.png" class="w-[20px]">
+                    <div class="py-2">All employees</div>
+                    <img src="images/down.png" class="w-[20px]">
+                </div>
+            </div>
+
+            <!-- Data Wrapper -->
+            <div class="data-wrapper w-full h-full grid bg-white mt-3 rounded">
+                <!-- First layer -->
+                <div class="flex justify-between p-4 px-6 border-b-lightGrey border-b-2">
+                    <p class="text-lg font-semibold">EXPORT</p>
+                    <img src="images/location.png" class="w-[20px]">
+                </div>
+
+                <!-- Second layer -->
+                <div class="flex items-center px-6 border-b-lightGrey border-b-2 flex-1 text-right">
+                    <a href="#" class="text-veryLightGrey font-semibold text-lg py-4 border-r-lightGrey text-left border-r-2 w-full">Category</a>
+                    <a href="#" class="text-veryLightGrey font-semibold text-lg py-4 w-full">Items solid</a>
+                    <a href="#" class="text-veryLightGrey font-semibold text-lg py-4 w-full">Not sales</a>
+                    <a href="#" class="text-veryLightGrey font-semibold text-lg py-4 w-full">Cost of goods</a>
+                    <a href="#" class="text-veryLightGrey font-semibold text-lg py-4 w-full">Gross profit</a>
+                </div>
+
+                <!-- Third layer -->
+                <div class="flex justify-center">
+                    <!-- If No Data -->
+                    <div class="flex items-center flex-col space-y-6 justify-center w-1/3">
+                        <div class="flex items-center justify-center w-32 h-32 rounded-full bg-lightGrey">
+                            <div class="flex items-center justify-center w-1/2 h-1/2 bg-deepGrey rounded-full">
+                                <img src="images/menu.png" alt="" class="max-w-full">
+                            </div>
+                        </div>
+                        <div class="text-veryLightGrey font-semibold space-y-2 flex flex-col justify-center items-center">
+                            <h3 class="text-3xl">No data to display</h3>
+                            <p class="text-lg">There are no sales in the selected time period</p>
+                        </div>
+                    </div>
+                    <!-- If has data -->
+
+                </div>
+
+                <!-- Fourth layer -->
+                <div class="flex justify-start p-4 px-6 border-t-lightGrey border-t-2">
+                    <!-- Next and prev link -->
+                    <div class="flex items-center">
+                        <a href="#" class="px-5 py-1 border font-bold text-xl">&#60;</a>
+                        <a href="#" class="px-5 py-1 border font-bold text-xl">&#62;</a>
+                    </div>
+
+                    <!-- Page link -->
+                    <div class="flex items-center font-semibold text-deepGrey px-10 border-r-lightGrey border-r-2">
+                        Page: <span class="border px-4 py-2 mx-3">1</span> of <span class="mx-2">1</span>
+                    </div>
+
+                    <!-- Row paper link -->
+                    <div class="px-10 flex items-center">
+                        <form class="space-x-2">
+                            <label for="page" class="font-semibold text-deepGrey">Role per page:</label>
+                            <input list="pages" name="pages" value="10" id="page" class="text-deepGrey font-bold focus:border-none focus:outline-none w-16 border-b-lightGrey border-b-2">
+                            <datalist id="pages" aria-valuemax="10">
+                                <option value="1">
+                                <option value="2">
+                                <option value="4">
+                                <option value="8">
+                                <option value="10">
+                            </datalist>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
